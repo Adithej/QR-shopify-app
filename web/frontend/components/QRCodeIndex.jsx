@@ -4,6 +4,7 @@ import {
   Icon,
   IndexTable,
   Stack,
+  VerticalStack,
   TextStyle,
   Thumbnail,
   UnstyledLink,
@@ -139,6 +140,7 @@ export function QRCodeIndex({ QRCodes, loading }) {
   /* A layout for small screens, built using Polaris components */
   return (
     <>
+    <VerticalStack gap="5">
       <Banner title="Product List" onDismiss={() => {}} status="warning">
         <p>Product was archived on March 7, 2017 at 3:12pm EDT.</p>
       </Banner>
@@ -165,6 +167,7 @@ export function QRCodeIndex({ QRCodes, loading }) {
           </IndexTable>
         )}
       </AlphaCard>
+      </VerticalStack>
     </>
   );
 }

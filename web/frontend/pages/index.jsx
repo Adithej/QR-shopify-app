@@ -5,9 +5,11 @@ import {
   Layout,
   Page,
   SkeletonBodyText,
+  Avatar,
 } from "@shopify/polaris";
 import { QRCodeIndex } from "../components";
 import { useAppQuery } from "../hooks";
+import SamplePage from "./SamplePage";
 
 
 
@@ -76,12 +78,13 @@ const qrCodesMarkup = QRCodes?.length ? (
     and include the empty state contents set above.
   */
     return (
-      <Page fullWidth={!!qrCodesMarkup}>
+      <Page fullWidth={!!qrCodesMarkup} >
         <TitleBar
           title="QR codes"
           primaryAction={{
             content: "Create QR code",
             onAction: () => navigate("/qrcodes/new"),
+           
           }}
         />
         <Layout>
@@ -91,6 +94,7 @@ const qrCodesMarkup = QRCodes?.length ? (
             {emptyStateMarkup}
           </Layout.Section>
         </Layout>
+        <SamplePage/>
       </Page>
     );
     

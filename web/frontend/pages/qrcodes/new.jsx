@@ -1,4 +1,4 @@
-import { Page } from "@shopify/polaris";
+import {Avatar, Page} from "@shopify/polaris";
 import { TitleBar, Button } from "@shopify/app-bridge-react";
 import { QRCodeForm } from "../../components";
 
